@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    flex-wrap: wrap;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+}
+nav{
+    box-shadow: 0 5px 10px 5px gray;
+}
+.cat-head h1{
+    text-align: left;
+    font-size: 40px;
+    margin: 10px 0 0 50px;
+    padding: 20px 0;
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    grid-row-gap: 40px;
+    margin-left: 7rem;
+    margin-top: 5rem;
+} 
+.img{
+    width: 300px;
+    object-fit: cover;
+    transition: 0.2s ease;
+    box-shadow: 0 5px 10px 5px white;
+    padding: 30px;
+    border-radius: 5px;
+}
+.items button{
+    padding: 10px 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 20px 5rem;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+.feedback textarea{
+    margin-top: 30px;
+    margin-left: 28rem;
+    border: 2px solid white;
+    width: 40%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 22px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.feedback{
+    box-shadow: 0 5px 10px 5px white;
+    margin: 3rem 0 10px 0;
+}
+.feedback button{
+    padding: 10px 20px;
+    margin-left: 45rem;
+    margin-top: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+}

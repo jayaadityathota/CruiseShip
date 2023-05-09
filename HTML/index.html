@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Management</title>
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    <link rel="stylesheet" href="D:/Cruise/CSS/style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+    <script src="https://kit.fontawesome.com/3f702e0d71.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="heading-1">Cruise Ship Management</h1>
+        <nav class="nav">
+            <a href="#home"><button type="submit" class="home common">Home</button></a>
+            <a href="#about"><button type="submit" class="about common">About</button></a>
+            <a href="#services"><button type="submit" class="services common">Services</button></a>
+            <a href="#contact"><button type="submit" class="contact common">Contact</button></a>
+            <a href="D:\Cruise\HTML\signin.html" target="_blank"><button type="submit" class="signin common">SignIn</button></a>
+        </nav>
+    </header>
+    <!-- main section -->
+    <main>
+        <div class="bgimage" id="home">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/221129103455-06-body-cruise-critic-editors-picks-2022-norwegian-prima.jpg"
+                alt="">
+            <h2 class="img-heading">Happiness Overloading</h2>
+            <p class="img-phase">"The views you and your partner will share are about as romantic as they
+                get.<br>Cruises are a place to get away from the stress and responsibilities of life."</p>
+        </div>
+        <!-- about section -->
+        <section class="about-section" id="about">
+            <div class="img2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Voyager_of_the_Seas_at_Port_of_Kobe.jpg/1280px-Voyager_of_the_Seas_at_Port_of_Kobe.jpg"
+                    alt="">
+            </div>
+            <div class="about-phrase">
+                <h3>About us</h3>
+                <p>
+                    <li>Cruise ships are large passenger ships used mainly for vacationing. Which are used for
+                        transport, <br>cruise ships typically embark on round-trip voyages to various ports-of-call,
+                        where passengers may <br>go on tours known as "shore excursions".</li>
+                    <li>Modern cruise ships tend to have less hull strength, speed, and agility compared to ocean
+                        liners.</li>
+                    <li>However, they have added amenities to cater to water tourists, with recent vessels being
+                        described <br>as "balcony-laden floating condominiums".</li>
+                    <li>Cruise ships MSC Poesia, Vision of the Seas, and Mein Schiff Herz at Tallinn Passenger Port at
+                        Estonia. <br>
+                        As of December 2018, there were 314 cruise ships operating worldwide, with a combined capacity
+                        of 537,000 <br>passengers.
+                        Cruising has become a major part of the tourism industry. </li>
+                </p>
+                <div class="service-list">
+                    <h4>We're Offered Services</h4>
+                    <li>Catering Service</li>
+                    <li>Stationary Service</li>
+                    <li>GYM Management Service</li>
+                    <li>Booking Movie tickets and Events</li>
+                </div>
+            </div>
+        </section>
+
+        <!-- services -->
+        <section class="service-section" id="services">
+            
+            <h1>Cruise Ship Services</h1>
+            <div class="service-data">
+                <div>
+                    <h3>Catering Items :-</h3>
+                    <p>Cruise ships offer a variety of onboard restaurants and dining options. In general, crui se ships will
+                       have a main dining room, <br>a sit-down venue where you can order from a menu of American and Continental 
+                       favorites.These are very large, banquet-style <br>restaurants, with a dress code enforced at dinner, and where
+                       you will likely have to share a table with other passengers. Most <br>ships will also have a buffet restaurant
+                       near the pool, where dress is more casual and passengers can help themselves to pre-prepared food.</p>
+                </div>
+                <div>
+                    <h3>Stationary Items :-</h3>
+                    <p>Voyagers can order gift items, chocolates, and tale books, among other things, with a stationary item order.</p>
+                </div>
+                <div>
+                    <h3>GYM Center :-</h3>
+                    <p>Most cruise ship gyms contain various pieces of cardio equipment (treadmills, elliptical trainers, stationary bikes, etc.), resistance <br>
+                       training machines, free weights and mats, and group class space. Generally, the newer the ship, the more high-tech options you'll find  <br>available.Gym amenities vary by cruise line, but most will have
+                        water coolers and towels to use, as well as individual TVs on cardio machines.</p>
+                </div>
+                <div>
+                    <h3>Booking Movie, Party and Events :-</h3>
+                    <p>Booking a private cruise with Celebrity Cruises means you’ll enjoy the complete attention of the crew. Detail of 
+                        your private <br>cruise is addressed seamlessly, resulting in the most memorable cruise experience for you and your guests. A partial <br>charter cruise is an excellent option for private parties, group incentive travel, meetings at
+                       sea, and special personal occasions.<br>
+                        <br>
+                       Cinema screens are joining theatre performances and Broadway-style shows as prime entertainment options onboard you fave fleets. <br>
+                       Whether it’s old classics or brand-new blockbusters. And with more variety that you can shake a mic stand at, there’s something to <br> 
+                       suit everyone’s tastes. So, what can you expect from watching a film or show 
+                       on the ocean waves?
+                </div>
+            </div>
+            
+            <div class="service-div">
+                <div class="catering">
+                    <img src="https://adventuresmithexplorations.com/wp-content/uploads/2023/02/aqua-mare-galapagos-superyacht-cat-i-owners-suite-202-dining-860-1.jpg"
+                        alt="">
+                    <a href="D:/Cruise/HTML/catering-items.html" target="_blank">Catering Items</a>
+                </div>
+                <div class="stationary">
+                    <img src="https://cdn.igp.com/f_auto,q_auto,t_prodl/products/p-assorted-fruity-candies-with-chocolate-and-stationery-set-in-basket-37404-m.jpg"
+                        alt="">
+                    <a href="D:/Cruise/HTML/stationary-items.html" target="_blank">Stationary Items</a>
+                </div>
+                <div class="gym">
+                    <img src="https://media.shermanstravel.com/cruises/3506_c__intro_07_28_w_ms_europa_fitness_area.jpg"
+                        alt="">
+                    <a href="D:/Cruise/HTML/gym.html" target="_blank">GYM Center</a>
+                </div>
+                <div class="event">
+                    <img src="https://www.gannett-cdn.com/-mm-/24925cd91ea94dc08bdb24844c431843017353db/c=0-320-6144-3776/local/-/media/2019/04/21/USATODAY/usatsports/Carnival-Breeze.jpg"
+                        alt="">
+                    <a href="D:/Cruise/HTML/events.html" target="_blank">Movie tickets, Events</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- contact section -->
+
+        <section class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-div">
+                <p>College Ranker</p>
+                <p>79954*****</p>
+                <p>Mumbai, India</p>
+                <p>collegeranker@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- -------------footer-------- -->
+    <footer>
+        <h3>TwiLearn <br><span>Edutech</span></h3>
+        <p>Copyrights © 2023 TwiLearn, Inc.</p>
+        <p class="policy">
+            Privacy Policy 
+        </p>
+        <p class="social">
+            Follow Us 
+        </p>
+        <div class="footer-div">
+            <a href="https://www.instagram.com/jaya_aditya_naidu" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/aditya-thota-2a114621a" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/jayaadityathota" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
